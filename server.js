@@ -9,7 +9,6 @@ const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
 const app = express();
-
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,7 +27,6 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Mongodb connection established");
 });
-
 // Passport middleware
 app.use(passport.initialize());
 
